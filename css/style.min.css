@@ -1296,7 +1296,9 @@ a:hover {
     -ms-flex-align: start;
     align-items: flex-start;
     padding-left: 7.625em;
-    position: relative
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .menu__links .m-arrow {
@@ -1350,7 +1352,8 @@ a:hover {
         font-size: .625em
     }
     .lang {
-        margin-right: 1em
+        margin-right: 1em;
+        display: none;
     }
     .lang__item {
         height: 2em;
@@ -2705,7 +2708,14 @@ a:hover {
 }
 
 .contacts {
-    padding: 8.5em 0
+    padding: 8.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100 * var(--vh));
 }
 
 .contacts__inner {
@@ -3281,6 +3291,30 @@ a:hover {
     .main-slider .swiper-slide-duplicate {
         display: none
     }
+}
+
+*::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+
+/* New shadow dom for play button */
+
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
 }
 
 
